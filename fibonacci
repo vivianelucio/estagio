@@ -1,0 +1,32 @@
+import javax.swing.JOptionPane;
+
+
+public class Fibonacci { 
+
+   
+    public static void main(String[] args){
+        
+        int numero1 = 1, numero2 = 0;
+        boolean pertence = false;
+        
+        
+        int numero = Integer.parseInt(JOptionPane.showInputDialog(null, "Insira um número: "));
+        
+        
+        for(int i = 0; i <numero; i++){
+            if (numero == numero1){
+                pertence = true;
+                break;
+            }
+            
+            numero1 = numero1 + numero2;
+            numero2 = numero1 - numero2;
+            
+        }
+        if (pertence){
+            JOptionPane.showMessageDialog(null,numero+ ": pertence a sequência de Fibonacci");
+        }else{
+            JOptionPane.showMessageDialog(null,numero+ ": não pertence a sequência de Fibonacci");
+        }
+    }
+}
